@@ -6,10 +6,7 @@
       "name": "Test preview environment",
       "source": {
         "pr": true,
-        "trigger": "push",
-        "filter": {
-          "toBranch": "*"
-        }
+        "trigger": "push"
       },
       "services": [
         {
