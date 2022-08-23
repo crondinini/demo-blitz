@@ -11,7 +11,7 @@
       "services": [
         {
           "id": "preview-test-web",
-          "name": "Blitz App",
+          "name": "BlitzApp",
           "type": "fargate",
           "cpu": 1,
           "memory": 2,
