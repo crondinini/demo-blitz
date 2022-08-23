@@ -10,17 +10,6 @@
       },
       "services": [
         {
-          "id": "preview-db",
-          "name": "Database",
-          "type": "rds",
-          "engine": "postgres",
-          "engineVersion": "12",
-          "instanceSize": "db.t2.micro",
-          "storage": 20,
-          "private": false,
-          "connectionStringEnvVarName": "DATABASE_URL"
-        },
-        {
           "id": "preview-test-web",
           "name": "Blitz App",
           "type": "fargate",
@@ -31,12 +20,6 @@
           "startCommand": "npm run start",
           "envVariables": {
             "APP_ENV": "staging",
-            "DATABASE_URL": {
-              "fromService": {
-                "id": "preview-db",
-                "value": "dbConnectionString"
-              }
-            },
             "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
