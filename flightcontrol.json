@@ -20,7 +20,8 @@
           "startCommand": "npm run start",
           "envVariables": {
             "APP_ENV": "staging",
-            "GROWTHBOOK_API_KEY": "fake-api-key"
+            "GROWTHBOOK_API_KEY": "fake-api-key",
+            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict"
           }
         }
       ]
