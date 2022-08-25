@@ -11,10 +11,10 @@ import logo from "public/logo.png"
  */
 
 const UserInfo = () => {
-  const currentUser = useCurrentUser()
+  const serviceURL = useCurrentUser()
   const [logoutMutation] = useMutation(logout)
 
-  if (currentUser) {
+  if (serviceURL) {
     return (
       <>
         <button
@@ -25,11 +25,7 @@ const UserInfo = () => {
         >
           Logout
         </button>
-        <div>
-          User id: <code>{currentUser.id}</code>
-          <br />
-          User role: <code>{currentUser.role}</code>
-        </div>
+        <div>Service URL is {serviceURL}</div>
       </>
     )
   } else {
