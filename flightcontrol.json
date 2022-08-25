@@ -1,32 +1,31 @@
 {
   "environments": [
     {
-      "id": "second-preview-environment",
-      "region": "us-east-2",
-      "name": "Test second preview environment",
+      "id": "preview-environment",
+      "region": "us-west-1",
+      "name": "Test preview environment",
       "source": {
         "pr": true,
-        "trigger": "push"
+        "trigger": "push",
+        "filter": {
+          "toBranch": "*"
+        }
       },
       "services": [
         {
-          "id": "preview-test-web-second",
-          "name": "BlitzApp",
-          "type": "fargate",
-          "cpu": 1,
-          "memory": 2,
-          "maxInstances": 3,
-          "buildCommand": "npm run build",
-          "startCommand": "npm run start",
-          "envVariables": {
-            "APP_ENV": "staging",
-            "GROWTHBOOK_API_KEY": "fake-api-key",
-            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict"
-          }
+          "id": "preview-db",
+          "name": "Database",
+          "type": "rds",
+          "engine": "postgres",
+          "engineVersion": "12",
+          "instanceSize": "db.t2.micro",
+          "storage": 20,
+          "private": false,
+          "connectionStringEnvVarName": "DATABASE_URL"
         },
         {
-          "id": "preview-test-web-second-another-service",
-          "name": "BlitzAppSecond",
+          "id": "preview-test-web",
+          "name": "Blitz App",
           "type": "fargate",
           "cpu": 1,
           "memory": 2,
@@ -35,14 +34,13 @@
           "startCommand": "npm run start",
           "envVariables": {
             "APP_ENV": "staging",
-            "GROWTHBOOK_API_KEY": "fake-api-key",
-            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict",
-            "SERVICE_URL": {
+            "DATABASE_URL": {
               "fromService": {
-                "id": "preview-test-web-second",
-                "value": "host"
+                "id": "preview-db",
+                "value": "dbConnectionString"
               }
-            }
+            },
+            "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
       ]
