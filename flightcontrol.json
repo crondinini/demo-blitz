@@ -6,7 +6,10 @@
       "name": "Test second preview environment",
       "source": {
         "pr": true,
-        "trigger": "push"
+        "trigger": "push",
+        "filter": {
+          "labels": ["bug"]
+        }
       },
       "services": [
         {
