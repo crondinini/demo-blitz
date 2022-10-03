@@ -51,6 +51,56 @@
       ]
     },
     {
+      "id": "third-preview-environment",
+      "region": "us-east-2",
+      "name": "Should cause issues",
+      "source": {
+        "pr": true,
+        "trigger": "push",
+        "filter": {
+          "labels": ["bug"]
+        }
+      },
+      "services": [
+        {
+          "id": "preview-test-web-second",
+          "name": "BlitzApp",
+          "type": "fargate",
+          "cpu": 1,
+          "memory": 2,
+          "maxInstances": 3,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "envVariables": {
+            "APP_ENV": "staging",
+            "GROWTHBOOK_API_KEY": "fake-api-key",
+            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict"
+          }
+        },
+        {
+          "id": "preview-test-web-second-another-service",
+          "name": "BlitzAppSecond",
+          "type": "fargate",
+          "cpu": 1,
+          "memory": 2,
+          "maxInstances": 3,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "envVariables": {
+            "APP_ENV": "staging",
+            "GROWTHBOOK_API_KEY": "fake-api-key",
+            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict",
+            "SERVICE_URL": {
+              "fromService": {
+                "id": "preview-test-web-second",
+                "value": "host"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "Test",
       "name": "Test",
       "region": "us-west-1",
