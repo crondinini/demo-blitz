@@ -9,21 +9,7 @@
         "trigger": "push"
       },
       "services": [
-         {
-          "id": "prod-db",
-          "name": "Production",
-          "port": 5432,
-          "type": "rds",
-          "engine": "postgres",
-          "private": false,
-          "storage": 20,
-          "maxStorage": 100,
-          "instanceSize": "db.t3.micro",
-          "engineVersion": "14",
-          "deletionProtection": false,
-          "applyChangesImmediately": false,
-          "autoUpgradeMinorVersions": true
-        },
+
         {
           "id": "preview-test-web-second",
           "name": "BlitzApp",
@@ -70,6 +56,21 @@
         "branch": "main"
       },
       "services": [
+        {
+          "id": "prod-db",
+          "name": "Production",
+          "port": 5432,
+          "type": "rds",
+          "engine": "postgres",
+          "private": false,
+          "storage": 20,
+          "maxStorage": 100,
+          "instanceSize": "db.t3.micro",
+          "engineVersion": "14",
+          "deletionProtection": false,
+          "applyChangesImmediately": false,
+          "autoUpgradeMinorVersions": true
+        },
         {
           "id": "test-web",
           "name": "Blitz App",
