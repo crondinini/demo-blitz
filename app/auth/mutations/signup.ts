@@ -4,7 +4,7 @@ import { Signup } from "app/auth/validations"
 import { Role } from "types"
 
 export default resolver.pipe(resolver.zod(Signup), async ({ email, password }, ctx) => {
-  console.log("process.env", process.env)
+  console.log("process.env", JSON.stringify(process.env))
   const hashedPassword = await SecurePassword.hash(password.trim())
   const user = await db.user.create({
     data: { email: email.toLowerCase().trim(), hashedPassword, role: "USER" },
