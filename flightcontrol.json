@@ -26,6 +26,21 @@
           "deletionProtection": false,
           "applyChangesImmediately": false,
           "autoUpgradeMinorVersions": true
+        },
+        {
+          "id": "test-web",
+          "name": "Blitz App",
+          "type": "fargate",
+          "cpu": 1,
+          "memory": 2,
+          "maxInstances": 3,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "envVariables": {
+            "DATABASE_URL": { "fromService": { "id": "db", "value": "dbConnectionString" } },
+            "APP_ENV": "staging",
+            "GROWTHBOOK_API_KEY": "fake-api-key"
+          }
         }
       ]
     },
