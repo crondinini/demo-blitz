@@ -43,7 +43,7 @@
             "DATABASE_PORT": { "fromService": { "id": "prod-db", "value": "port" } },
             "DATABASE_DB_ENGINE": { "fromService": { "id": "prod-db", "value": "dbEngine" } },
             "DATABASE_USERNAME": { "fromService": { "id": "prod-db", "value": "username" } },
-            "DATABASE_PWD": { "fromService": { "id": "prod-db", "value": "username" } },
+            "DATABASE_PWD": { "fromService": { "id": "prod-db", "value": "password" } },
             "APP_ENV": "staging",
             "GROWTHBOOK_API_KEY": "fake-api-key"
           }
