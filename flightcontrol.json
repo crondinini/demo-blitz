@@ -37,7 +37,7 @@
           "buildCommand": "npm run build",
           "startCommand": "npm run start",
           "envVariables": {
-            "DATABASE_URL": { "fromService": { "id": "db", "value": "dbConnectionString" } },
+            "DATABASE_URL": { "fromService": { "id": "prod-db", "value": "dbConnectionString" } },
             "APP_ENV": "staging",
             "GROWTHBOOK_API_KEY": "fake-api-key"
           }
