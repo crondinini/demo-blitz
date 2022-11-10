@@ -28,6 +28,7 @@
           "autoUpgradeMinorVersions": true
         },
         {
+          "id": "test-web",
           "name": "Blitz App",
           "type": "fargate",
           "cpu": 1,
