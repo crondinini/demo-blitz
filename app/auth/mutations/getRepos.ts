@@ -22,7 +22,8 @@ export default resolver.pipe(async () => {
       throw new Error()
     }
 
-    if (!clientConnected) {
+    console.log("client.isOpen", client.isOpen)
+    if (!client.isOpen) {
       await client.connect()
       clientConnected = true
     }
