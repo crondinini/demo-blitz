@@ -38,12 +38,7 @@
           "startCommand": "npm run start",
           "envVariables": {
             "DATABASE_URL": { "fromService": { "id": "prod-db", "value": "dbConnectionString" } },
-            "DATABASE_NAME": { "fromService": { "id": "prod-db", "value": "dbName" } },
-            "DATABASE_HOST": { "fromService": { "id": "prod-db", "value": "host" } },
-            "DATABASE_PORT": { "fromService": { "id": "prod-db", "value": "port" } },
-            "DATABASE_DB_ENGINE": { "fromService": { "id": "prod-db", "value": "dbEngine" } },
-            "DATABASE_USERNAME": { "fromService": { "id": "prod-db", "value": "username" } },
-            "DATABASE_PWD": { "fromService": { "id": "prod-db", "value": "password" } },
+            "REDIS_ENDPOINT_URI": { "fromParameterStore": "redis-url-us-east-2" },
             "APP_ENV": "staging",
             "GROWTHBOOK_API_KEY": "fake-api-key"
           }
