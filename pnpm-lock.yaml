@@ -18,6 +18,7 @@ specifiers:
   react: 18.0.0-beta-149b420f6-20211119
   react-dom: 18.0.0-alpha-5ca4b0433-20211020
   react-final-form: 6.5.8
+  redis: 4.5.0
   typescript: ~4.5
   zod: 3.12.0
 
@@ -28,6 +29,7 @@ dependencies:
   react: 18.0.0-beta-149b420f6-20211119
   react-dom: 18.0.0-alpha-5ca4b0433-20211020_vauh524bn45gccdkf3ewe3ldwi
   react-final-form: 6.5.8_ioovzpqmhledhgcyzgsz5oef3i
+  redis: 4.5.0
   zod: 3.12.0
 
 devDependencies:
@@ -1995,6 +1997,73 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: false
+
+  /@redis/bloom/1.1.0_@redis+client@1.4.0:
+    resolution:
+      {
+        integrity: sha512-9QovlxmpRtvxVbN0UBcv8WfdSMudNZZTFqCsnBszcQXqaZb/TVe30ScgGEO7u1EAIacTPAo7/oCYjYAxiHLanQ==,
+      }
+    peerDependencies:
+      "@redis/client": ^1.0.0
+    dependencies:
+      "@redis/client": 1.4.0
+    dev: false
+
+  /@redis/client/1.4.0:
+    resolution:
+      {
+        integrity: sha512-1gEj1AkyXPlkcC/9/T5xpDcQF8ntERURjLBgEWMTdUZqe181zfI9BY3jc2OzjTLkvZh5GV7VT4ktoJG2fV2ufw==,
+      }
+    engines: { node: ">=14" }
+    dependencies:
+      cluster-key-slot: 1.1.1
+      generic-pool: 3.9.0
+      yallist: 4.0.0
+    dev: false
+
+  /@redis/graph/1.1.0_@redis+client@1.4.0:
+    resolution:
+      {
+        integrity: sha512-16yZWngxyXPd+MJxeSr0dqh2AIOi8j9yXKcKCwVaKDbH3HTuETpDVPcLujhFYVPtYrngSco31BUcSa9TH31Gqg==,
+      }
+    peerDependencies:
+      "@redis/client": ^1.0.0
+    dependencies:
+      "@redis/client": 1.4.0
+    dev: false
+
+  /@redis/json/1.0.4_@redis+client@1.4.0:
+    resolution:
+      {
+        integrity: sha512-LUZE2Gdrhg0Rx7AN+cZkb1e6HjoSKaeeW8rYnt89Tly13GBI5eP4CwDVr+MY8BAYfCg4/N15OUrtLoona9uSgw==,
+      }
+    peerDependencies:
+      "@redis/client": ^1.0.0
+    dependencies:
+      "@redis/client": 1.4.0
+    dev: false
+
+  /@redis/search/1.1.0_@redis+client@1.4.0:
+    resolution:
+      {
+        integrity: sha512-NyFZEVnxIJEybpy+YskjgOJRNsfTYqaPbK/Buv6W2kmFNaRk85JiqjJZA5QkRmWvGbyQYwoO5QfDi2wHskKrQQ==,
+      }
+    peerDependencies:
+      "@redis/client": ^1.0.0
+    dependencies:
+      "@redis/client": 1.4.0
+    dev: false
+
+  /@redis/time-series/1.0.4_@redis+client@1.4.0:
+    resolution:
+      {
+        integrity: sha512-ThUIgo2U/g7cCuZavucQTQzA9g9JbDDY2f64u3AbAoz/8vE2lt2U37LamDUVChhaDA3IRT9R6VvJwqnUfTJzng==,
+      }
+    peerDependencies:
+      "@redis/client": ^1.0.0
+    dependencies:
+      "@redis/client": 1.4.0
     dev: false
 
   /@rushstack/eslint-patch/1.1.0:
@@ -4137,6 +4206,14 @@ packages:
       readable-stream: 2.3.7
     dev: false
 
+  /cluster-key-slot/1.1.1:
+    resolution:
+      {
+        integrity: sha512-rwHwUfXL40Chm1r08yrhU3qpUvdVlgkKNeyeGPOxnW8/SyVDvgRaed/Uz54AqWNaTCAThlj6QAs3TZcKI0xDEw==,
+      }
+    engines: { node: ">=0.10.0" }
+    dev: false
+
   /co/4.6.0:
     resolution: { integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ= }
     engines: { iojs: ">= 1.0.0", node: ">= 0.12.0" }
@@ -5219,7 +5296,10 @@ packages:
     dev: false
 
   /escape-string-regexp/1.0.5:
-    resolution: { integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ= }
+    resolution:
+      {
+        integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==,
+      }
     engines: { node: ">=0.8.0" }
 
   /escape-string-regexp/2.0.0:
@@ -6089,6 +6169,14 @@ packages:
 
   /functional-red-black-tree/1.0.1:
     resolution: { integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc= }
+
+  /generic-pool/3.9.0:
+    resolution:
+      {
+        integrity: sha512-hymDOu5B53XvN4QT9dBmZxPX4CWhBPPLguTZ9MMFeFa/Kg0xWVfylOVNlJji/E7yTZWFd/q9GO5TxDLq156D7g==,
+      }
+    engines: { node: ">= 4" }
+    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution:
@@ -10716,6 +10804,20 @@ packages:
     resolution: { integrity: sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs= }
     dependencies:
       esprima: 4.0.1
+    dev: false
+
+  /redis/4.5.0:
+    resolution:
+      {
+        integrity: sha512-oZGAmOKG+RPnHo0UxM5GGjJ0dBd/Vi4fs3MYwM1p2baDoXC0wpm0yOdpxVS9K+0hM84ycdysp2eHg2xGoQ4FEw==,
+      }
+    dependencies:
+      "@redis/bloom": 1.1.0_@redis+client@1.4.0
+      "@redis/client": 1.4.0
+      "@redis/graph": 1.1.0_@redis+client@1.4.0
+      "@redis/json": 1.0.4_@redis+client@1.4.0
+      "@redis/search": 1.1.0_@redis+client@1.4.0
+      "@redis/time-series": 1.0.4_@redis+client@1.4.0
     dev: false
 
   /regenerator-runtime/0.13.9:
