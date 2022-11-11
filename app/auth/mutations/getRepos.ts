@@ -9,8 +9,6 @@ function composeResponse(username, repos, cached) {
   }
 }
 
-import { RedisCommandArgument } from "@redis/client/dist/lib/commands"
-
 const client = createClient({
   url: process.env.REDIS_ENDPOINT_URI,
   password: process.env.REDIS_PASSWORD,
@@ -46,7 +44,7 @@ export default resolver.pipe(async () => {
     if (!isNaN(repos)) {
       if (client) {
         console.log("setting")
-        client.SETEX(username as RedisCommandArgument, 3600, JSON.stringify(repos))
+        client.SETEX(username, 3600, JSON.stringify(repos))
       }
       return composeResponse(username, repos, false)
     } else {
