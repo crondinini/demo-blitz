@@ -9,11 +9,10 @@ function composeResponse(username, repos, cached) {
   }
 }
 
+console.log("process.env.REDIS_ENDPOINT_URI", process.env.REDIS_ENDPOINT_URI)
 const client = createClient({
   url: process.env.REDIS_ENDPOINT_URI,
-  password: process.env.REDIS_PASSWORD,
 })
-let clientConnected = false
 
 export default resolver.pipe(async () => {
   try {
@@ -25,7 +24,6 @@ export default resolver.pipe(async () => {
     console.log("client.isOpen", client.isOpen)
     if (!client.isOpen) {
       await client.connect()
-      clientConnected = true
     }
 
     if (client) {
