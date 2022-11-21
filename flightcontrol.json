@@ -50,7 +50,7 @@
     },
     {
       "id": "Test",
-      "name": "Test",
+      "name": "Changed env name",
       "region": "us-west-1",
       "source": {
         "branch": "main"
