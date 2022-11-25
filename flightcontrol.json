@@ -9,7 +9,6 @@
         "trigger": "push"
       },
       "services": [
-
          {
           "id": "preview-db",
           "name": "Preview Database",
@@ -37,7 +36,7 @@
           "startCommand": "npm run start",
           "envVariables": {
             "APP_ENV": "staging",
-            "GROWTHBOOK_API_KEY": "fake-api-key",
+            "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
       ]
