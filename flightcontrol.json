@@ -23,7 +23,8 @@
           "deletionProtection": false,
           "applyChangesImmediately": false,
           "autoUpgradeMinorVersions": true,
-          "connectionStringEnvVarName": "DATABASE_URL"
+          "connectionStringEnvVarName": "DATABASE_URL",
+          "vpc": {"id": "vpc-09a143fa51a1a4e58"}
         },
         {
           "id": "preview-fargate",
