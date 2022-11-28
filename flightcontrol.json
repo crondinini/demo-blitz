@@ -2,7 +2,7 @@
   "environments": [
     {
       "id": "preview-environment",
-      "region": "us-east-2",
+      "region": "us-west-1",
       "name": "Preview environment",
       "source": {
         "pr": true,
@@ -36,46 +36,6 @@
           "startCommand": "npm run start",
           "envVariables": {
             "APP_ENV": "staging",
-            "GROWTHBOOK_API_KEY": "fake-api-key"
-          }
-        }
-      ]
-    },
-    {
-      "id": "Test",
-      "name": "Changed env name",
-      "region": "us-west-1",
-      "source": {
-        "branch": "main"
-      },
-      "services": [
-        {
-          "id": "prod-db",
-          "name": "Production",
-          "port": 5432,
-          "type": "rds",
-          "engine": "postgres",
-          "private": false,
-          "storage": 20,
-          "maxStorage": 100,
-          "instanceSize": "db.t3.micro",
-          "engineVersion": "14",
-          "deletionProtection": false,
-          "applyChangesImmediately": false,
-          "autoUpgradeMinorVersions": true
-        },
-        {
-          "id": "test-web",
-          "name": "Blitz App",
-          "type": "fargate",
-          "cpu": 1,
-          "memory": 2,
-          "maxInstances": 3,
-          "buildCommand": "npm run build",
-          "startCommand": "npm run start",
-          "envVariables": {
-            "APP_ENV": "staging",
-            "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict",
             "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
