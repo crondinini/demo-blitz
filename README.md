@@ -1,6 +1,6 @@
 [![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
 
-This is a fake app for testing
+This is a fake app for testing!
 
 # **demo-blitz**
 
