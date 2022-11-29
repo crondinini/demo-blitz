@@ -2,7 +2,7 @@
   "environments": [
     {
       "id": "preview-environment",
-      "region": "us-west-1",
+      "region": "us-west-2",
       "name": "Preview environment",
       "source": {
         "pr": true,
