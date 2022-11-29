@@ -2,7 +2,6 @@
 
 This is a fake app for testing!
 
-
 ## Getting Started
 
 Run your app in the development mode.
