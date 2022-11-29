@@ -1,7 +1,7 @@
+# Fake App
 
 This is a fake app for testing!
 
-# **demo-blitz**
 
 ## Getting Started
 
