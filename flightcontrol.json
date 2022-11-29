@@ -23,8 +23,7 @@
           "deletionProtection": false,
           "applyChangesImmediately": false,
           "autoUpgradeMinorVersions": true,
-          "connectionStringEnvVarName": "DATABASE_URL",
-          "vpc": {"id": "vpc-09a143fa51a1a4e58"}
+          "connectionStringEnvVarName": "DATABASE_URL"
         },
         {
           "id": "preview-fargate",
@@ -35,7 +34,6 @@
           "maxInstances": 3,
           "buildCommand": "npm run build",
           "startCommand": "npm run start",
-          "vpc": {"id": "vpc-09a143fa51a1a4e58"},
           "envVariables": {
             "APP_ENV": "staging",
             "GROWTHBOOK_API_KEY": "fake-api-key"
