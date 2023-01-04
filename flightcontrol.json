@@ -53,6 +53,7 @@
           "id": "test-web",
           "name": "Blitz App",
           "type": "fargate",
+          "buildType": "nixpacks",
           "cpu": 1,
           "memory": 2,
           "maxInstances": 3,
