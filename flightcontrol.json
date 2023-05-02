@@ -9,7 +9,7 @@
         "trigger": "push"
       },
       "services": [
-         {
+        {
           "id": "preview-db-mysql",
           "name": "Preview Database",
           "port": 5432,
@@ -49,6 +49,20 @@
         "branch": "main"
       },
       "services": [
+        {
+          "id": "simple-static",
+          "name": "simple-static",
+          "type": "static",
+          "basePath": ".",
+          "buildType": "nixpacks",
+          "envVariables": {},
+          "singlePageApp": false,
+          "outputDirectory": "packages/web",
+          "versionHistoryCount": 10,
+          "buildCommand": "echo 'done'",
+          "installCommand": "echo 'done'",
+          "watchPaths": ["packages/web/**"]
+        },
         {
           "id": "test-web",
           "name": "Blitz App",
