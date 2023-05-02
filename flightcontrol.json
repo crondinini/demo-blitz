@@ -73,6 +73,7 @@
           "maxInstances": 3,
           "buildCommand": "npm run build",
           "startCommand": "npm run start",
+          "watchPaths": ["app/**"],
           "envVariables": {
             "APP_ENV": "staging",
             "DATABASE_URL": "mysql://4ui3z98is3zd:pscale_pw_Wnj0X4hQuJ52yfHoDwt6agLrocJHEKp3RepUOiq6Zzg@80d2ei11hj46.us-east-1.psdb.cloud/blitzapp?sslaccept=strict",
