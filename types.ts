@@ -10,7 +10,7 @@ declare module "blitz" {
   export interface Session {
     isAuthorized: SimpleRolesIsAuthorized<Role>
     PublicData: {
-      userId: string
+      userId: number
       role: Role
     }
   }
