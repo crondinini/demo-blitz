@@ -1,4 +1,4 @@
-# Fake App!
+# Fake App
 
 This is a fake app for testing!
 
